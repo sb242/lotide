@@ -35,12 +35,10 @@ const eqObjects = function(obj1, obj2) {
   for (let value of obj1Keys) {
     if (Array.isArray(obj1[value]) && Array.isArray(obj2[value])) { //checking if both obj values are arrays and comparing arrays
       if (!eqArrays(obj1[value],obj2[value])) {
-        console.log('eqArray is returning false');
         return false;
       }
     } 
     if(typeof obj1[value] === 'object' && typeof obj2[value] === 'object') {
-      console.log(`obj1 ${obj1[value]} obj2 ${obj1[value]}`);
       return eqObjects(obj1[value], obj2[value]);
     }
 
