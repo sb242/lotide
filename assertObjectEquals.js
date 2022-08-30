@@ -53,12 +53,3 @@ const assertObjectEqual = function(actual, expected) {
     console.log(`🔴 Assertion Passed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
-
-
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertObjectEqual(cd, dc);
-
-//const cd2 = { c: "1", d: ["2", 3, 4] };
-//console.log(eqObjects(cd, cd2)); // => false
